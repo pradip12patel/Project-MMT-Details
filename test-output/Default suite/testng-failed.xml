@@ -5,12 +5,11 @@
     <classes>
       <class name="TestRunner.TestClass">
         <methods>
+          <include name="aftersuite"/>
           <include name="openurl"/>
-          <include name="endreport"/>
-          <include name="testapp"/>
-          <include name="teardown"/>
+          <include name="sbeforesuite"/>
+          <include name="MMTApplication"/>
           <include name="closebrowser"/>
-          <include name="setup"/>
         </methods>
       </class> <!-- TestRunner.TestClass -->
     </classes>

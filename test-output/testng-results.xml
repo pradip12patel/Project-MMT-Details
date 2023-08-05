@@ -2,32 +2,32 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2023-08-04T04:25:12 IST" name="Suite" finished-at="2023-08-04T04:25:43 IST" duration-ms="31274">
+  <suite started-at="2023-08-05T14:04:09 IST" name="Default suite" finished-at="2023-08-05T14:06:23 IST" duration-ms="133646">
     <groups>
     </groups>
-    <test started-at="2023-08-04T04:25:12 IST" name="Test" finished-at="2023-08-04T04:25:43 IST" duration-ms="31274">
+    <test started-at="2023-08-05T14:04:09 IST" name="Default test" finished-at="2023-08-05T14:06:23 IST" duration-ms="133646">
       <class name="TestRunner.TestClass">
-        <test-method is-config="true" signature="sbeforesuite()[pri:0, instance:TestRunner.TestClass@6f1de4c7]" started-at="2023-08-04T04:25:12 IST" name="sbeforesuite" finished-at="2023-08-04T04:25:12 IST" duration-ms="376" status="PASS">
+        <test-method is-config="true" signature="sbeforesuite()[pri:0, instance:TestRunner.TestClass@2a4fb17b]" started-at="2023-08-05T14:04:09 IST" name="sbeforesuite" finished-at="2023-08-05T14:04:09 IST" duration-ms="411" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- sbeforesuite -->
-        <test-method is-config="true" signature="openurl()[pri:0, instance:TestRunner.TestClass@6f1de4c7]" started-at="2023-08-04T04:25:12 IST" name="openurl" finished-at="2023-08-04T04:25:27 IST" duration-ms="14626" status="PASS">
+        <test-method is-config="true" signature="openurl()[pri:0, instance:TestRunner.TestClass@2a4fb17b]" started-at="2023-08-05T14:04:09 IST" name="openurl" finished-at="2023-08-05T14:04:28 IST" duration-ms="18410" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- openurl -->
-        <test-method signature="MMTApplication()[pri:0, instance:TestRunner.TestClass@6f1de4c7]" started-at="2023-08-04T04:25:27 IST" name="MMTApplication" finished-at="2023-08-04T04:25:43 IST" duration-ms="16441" status="PASS">
+        <test-method signature="MMTApplication()[pri:0, instance:TestRunner.TestClass@2a4fb17b]" started-at="2023-08-05T14:04:28 IST" name="MMTApplication" finished-at="2023-08-05T14:06:23 IST" duration-ms="115025" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- MMTApplication -->
-        <test-method is-config="true" signature="closebrowser()[pri:0, instance:TestRunner.TestClass@6f1de4c7]" started-at="2023-08-04T04:25:43 IST" name="closebrowser" finished-at="2023-08-04T04:25:43 IST" duration-ms="151" status="PASS">
+        <test-method is-config="true" signature="closebrowser()[pri:0, instance:TestRunner.TestClass@2a4fb17b]" started-at="2023-08-05T14:06:23 IST" name="closebrowser" finished-at="2023-08-05T14:06:23 IST" duration-ms="151" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- closebrowser -->
-        <test-method is-config="true" signature="aftersuite()[pri:0, instance:TestRunner.TestClass@6f1de4c7]" started-at="2023-08-04T04:25:43 IST" name="aftersuite" finished-at="2023-08-04T04:25:44 IST" duration-ms="808" status="PASS">
+        <test-method is-config="true" signature="aftersuite()[pri:0, instance:TestRunner.TestClass@2a4fb17b]" started-at="2023-08-05T14:06:23 IST" name="aftersuite" finished-at="2023-08-05T14:06:24 IST" duration-ms="722" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- aftersuite -->
       </class> <!-- TestRunner.TestClass -->
-    </test> <!-- Test -->
-  </suite> <!-- Suite -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
 </testng-results>

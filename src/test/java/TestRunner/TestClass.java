@@ -13,6 +13,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.Test;
 
 import Resourses.BaseClass;
+import Resourses.CommonMethod;
 import Resourses.ConstantMethod;
 import Resourses.PageObjectModel;
 
@@ -42,7 +43,9 @@ public class TestClass extends BaseClass  {
 		
 		Thread.sleep(1000);
 		
-		obj.framecancel().click();
+		JavascriptExecutor jy=(JavascriptExecutor)  driver;
+		
+		jy.executeScript("arguments[0].click()", obj.framecancel());
 		
 		log.info("handle frame");
 		
@@ -69,11 +72,28 @@ public class TestClass extends BaseClass  {
      
      //  jc.executeScript("arguments[0].click()", w2);  
 		
-	    WebElement w1=obj.fromm();
-	
-	     JavascriptExecutor js=(JavascriptExecutor) driver;
-	     
-	     js.executeScript("arguments[0].click()", w1);   
+		
+	//	CommonMethod.listhandle(obj.roundtrip(), "Round Trip", driver);
+		
+			List<WebElement> w=obj.roundtrip();
+		
+		  for(WebElement ww:w)  {
+			  
+			  System.out.println(ww.getSize());
+			  
+			  if(ww.getText().equalsIgnoreCase("Round Trip")) {
+				  
+				      ww.click();
+				     break;
+					  	
+				  }
+			  
+		}            
+	    
+		
+		log.info("trip type");
+		
+	   CommonMethod.clickable(obj.fromm(), driver);   
 			
 	     Thread.sleep(2000);
 	     
@@ -84,57 +104,75 @@ public class TestClass extends BaseClass  {
 	    Thread.sleep(3000);
 	    
 	    
-	   WebElement e= obj.cityname();
-	    
-	    JavascriptExecutor jv=(JavascriptExecutor) driver;
-	     
-	     jv.executeScript("arguments[0].click()", e); 
+	  CommonMethod.clickable(obj.cityname(), driver);
 		
-	/*	List<WebElement> w=driver.findElements(By.xpath("//li//div//div//p"));
-		
-		  for(int i=0;i<=w.size()-1;i++)  {
-			  
-			  System.out.println(w.size());
-			  
-			  if(w.get(i).getText().equalsIgnoreCase("Aurangabad, India")) {
-				  
-				     JavascriptExecutor jv=(JavascriptExecutor) driver;
-				     
-				     jv.executeScript("arguments[0].click()", w.get(i)); 
-				 
-				     break;
-					  	  
-				  }
-			      else {
-				  
-				  System.out.println("put correct");
-				   break;
-				
-			}     
-			  
-		}            */
+	
 	    
-	    
-	    WebElement web= obj.to();
-	    
-	    JavascriptExecutor jk=(JavascriptExecutor) driver;
-	     
-	    jk.executeScript("arguments[0].click()", web);
+	   CommonMethod.clickable(obj.to(), driver);
 	    
 	    obj.tocity().sendKeys(ConstantMethod.tocity);
 	    
-	    WebElement  el=obj.cityname1();
-	    
-	    JavascriptExecutor je=(JavascriptExecutor) driver;
-	     
-	    je.executeScript("arguments[0].click()", el); 
+	   CommonMethod.clickable(obj.cityname1(), driver);
 		
 	    log.info("Test Case Is Passed");
 	    
 	    
+	    String title="";
+	    
+	    while (!(title.equals("January 2024"))) {
+			
+	    	CommonMethod.clickable(obj.clicknext(), driver);
+	    	
+	    	WebElement titlefind=obj.titles();
+	    	
+	    	title=titlefind.getText();
+			
+		}
+	    
+	    CommonMethod.listhandle(obj.dates(),"20", driver);
+	    
+	    log.info("date selected :" + "20");
 	    
 	    
+	    CommonMethod.listhandle(obj.dates1(), "5", driver);
 	    
+	    log.info("date selected :" + "5");
+	    
+	    
+	    CommonMethod.clickable(obj.travelling(), driver);
+	    
+	    log.info("travel click");
+	    
+	    CommonMethod.listhandle(obj.adultseat(), ">9", driver);
+	    
+	    log.info("adult seat");
+	    
+	    CommonMethod.listhandle(obj.childern(), ">6", driver);
+	    
+	    log.info("childern seat");
+	    
+	    CommonMethod.listhandle(obj.infrontseat(), ">6", driver);
+	    
+	    log.info("infront seat");
+	    
+	    CommonMethod.listhandle(obj.seatclass(), "Premium Economy", driver);
+	    
+	    log.info("class select");
+	    
+	    Thread.sleep(4000);
+	    
+	    CommonMethod.clickable(obj.clickapply(), driver);
+	    
+	    log.info("apply");
+	    
+	    CommonMethod.clickable(obj.search(), driver);
+	    
+	    log.info("search successfully");
+	    
+	    
+	    CommonMethod.handleassertion(obj.assertion().getText(), "Popular Filters", "check the value");
+	    
+	    log.info("Handle assertion");
 	    
 	 }
 

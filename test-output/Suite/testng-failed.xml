@@ -10,7 +10,7 @@
         <methods>
           <include name="aftersuite"/>
           <include name="openurl"/>
-          <include name="testapp"/>
+          <include name="MMTApplication"/>
           <include name="sbeforesuite"/>
           <include name="closebrowser"/>
         </methods>
