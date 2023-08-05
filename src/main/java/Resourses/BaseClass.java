@@ -54,6 +54,7 @@ public class BaseClass {
 			 ChromeOptions op=new ChromeOptions();
 		     op.addArguments("--remote-allow-origins=*"); 
 		     op.addExtensions(new File("./Extection/AdGuard.crx"));
+		     op.addArguments("--disable-notifications");
 		 //    op.setBrowserVersion("117");
 		     op.setBinary("G:\\chrome-win32\\chrome.exe");
 		//   op.setBinary("C:\\Users\\LENOVO\\.cache\\selenium\\chrome\\win64\\116.0.5845.49\\chrome.exe");
